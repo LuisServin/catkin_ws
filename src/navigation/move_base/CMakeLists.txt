@@ -46,7 +46,11 @@ add_dependencies(move_base geometry_msgs_gencpp)
 add_executable(move_base_node
   src/move_base_node.cpp
 )
+
 target_link_libraries(move_base_node move_base)
+# Comment by LASG
+# in this line is set the name for the node
+# changing from move_base_node -> move_base
 set_target_properties(move_base_node PROPERTIES OUTPUT_NAME move_base)
 
 install(DIRECTORY launch
